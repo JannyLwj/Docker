@@ -32,5 +32,7 @@ RUN pip install XlsxWriter
 RUN pip install xlrd
 RUN pip install xlwt
 RUN pip install xlutils
+ADD run.sh /usr/local/sbin/run.sh
+RUN chmod 755 /usr/local/sbin/run.sh
 EXPOSE 22 80 8000
 #CMD ["python", "/var/www/html/restmanage-tool/restmanagement/manage.py", "runserver"]
